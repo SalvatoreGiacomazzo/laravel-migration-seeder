@@ -14,8 +14,6 @@ use App\Http\Controllers\TrainController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.page');
-});
 
-Route::get('/trains', [TrainController::class, "index"])->name("trains.page");
+
+Route::get('/trains', [TrainController::class, "index"])->name("trains.pages");
