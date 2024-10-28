@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string("arrival_station")->nullable(false);
             $table->dateTime("arrival_hour")->nullable(false);
             $table->dateTime("departure_hour")->nullable(false);
-            $table->varchar("train_code", 10)->unique();
+            $table->string("train_code", 10)->unique();
             $table->tinyInteger("carriage_number");
-            $table->boolean("on_time")->default(true);
-            $table->boolean("deleted")->default(false);
+            $table->boolean("on_time")->default(true)->nullable(false);
+            $table->boolean("deleted")->default(false)->nullable(false);
         });
     }
 
